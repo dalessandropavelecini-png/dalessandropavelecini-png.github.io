@@ -1,0 +1,181 @@
+/* 1. IMPORTANDO GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* 2. CONFIGURAÇÕES GERAIS */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8fafc; /* Cinza azulado bem suave */
+  margin: 0;
+  padding: 0;
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  color: #0f172a;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+
+header p {
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* --- 3. ESTILO DO PAINEL ADMIN (Centralizado e Moderno) --- */
+/* Envolva seu formulário no admin.html com <div class="container-admin"> */
+.container-admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Ocupa quase toda a altura da tela */
+  padding: 20px;
+}
+
+.admin-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  /* Sombra profunda para dar profundidade ao painel */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  border: 1px solid #f1f5f9;
+}
+
+.admin-card h2 {
+  margin-bottom: 25px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.admin-card input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.admin-card input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  outline: none;
+}
+
+/* --- 4. VITRINE DE PRODUTOS --- */
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 80px auto;
+  padding: 0 20px;
+}
+
+/* Estilização do Card do Produto */
+.card-produto {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #f1f5f9;
+  /* Sombra suave */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de Hover: Desafio cumprido (Scale + Sombra) */
+.card-produto:hover {
+  transform: scale(1.03) translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #e2e8f0;
+}
+
+.card-produto img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card-produto:hover img {
+  transform: scale(1.05);
+}
+
+.card-produto h3 {
+  margin: 10px 0 5px;
+  font-size: 1.25rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.card-produto small {
+  display: block;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Preço em Destaque */
+.preco-destaque {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #6366f1; /* Roxo moderno */
+  margin: 15px 0;
+  display: block;
+}
+
+/* --- 5. BOTÕES --- */
+button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
+}
+
+button:hover {
+  background: #4f46e5;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Mensagens de Aviso */
+#mensagem-aviso {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
